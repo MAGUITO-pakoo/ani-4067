@@ -114,4 +114,4 @@ Taille de l'exécutable : 128 KB
 
 ## Comparaison
 
-(quelques lignes : lequel est plus gros, lequel a été plus long ou plus rapide à construire, et si l'écart vous surprend ou non)
+j'ignore si ces normal mais dans l'explorateur de fichier, les deux executable ont litteralement la mm taille, et sur le terminal le mm temps d'execution... tres etrange. 
