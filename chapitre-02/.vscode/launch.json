@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/pakoo/Desktop/AN-ING4/Coder_pour_la_VR_l'XR_et_l'AR_I/ani-4067/chapitre-02/exo6-le_filtre_qui_ne_s_active_jamais/MaSalleWks/MaSalle/src",
+      "program": "c:/Users/pakoo/Desktop/AN-ING4/Coder_pour_la_VR_l'XR_et_l'AR_I/ani-4067/chapitre-02/exo6-le_filtre_qui_ne_s_active_jamais/MaSalleWks/MaSalle/src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
