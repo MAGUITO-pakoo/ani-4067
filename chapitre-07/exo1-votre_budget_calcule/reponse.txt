@@ -1,0 +1,8 @@
+La fréquence de mon écran :
+Dans les réglages de Windows, mon écran est réglé sur 60 Hz (il accepte jusqu'à 240 Hz, mais il est sur 60). Ça colle avec ma mesure : environ 16,67 ms entre deux images, donc 1000 / 16,67 ≈ 60 Hz.
+
+La cadence que je tiens :
+Aucune des trois. À 60 Hz je suis au-dessus des budgets de 72 Hz (13,889 ms), 90 Hz (11,111 ms) et 120 Hz (8,333 ms). Ma salle tourne sous DirectX 11 (api=DirectX 11 dans app.log), donc NK_VK_MAILBOX ne sert à rien chez moi. J'ai essayé cfg.vsync = false avec une variable MASALLE_VSYNC que j'ai ajoutée dans main.cpp, mais la médiane est restée à 16,665 ms. Dans mes deux mesures c'est donc l'écran qui fixe le rythme, et je ne sais pas si mon programme tiendrait vraiment 11 ms.
+
+Ce que dit le maximum :
+Dans la série ecran le max est de 18,668 ms, donc au moins une image est arrivée en retard alors que la moyenne (16,670 ms) ne le montre presque pas. Dans la série sans attente, un seul intervalle de 793 ms fait monter la moyenne à 17,442 ms alors que la médiane ne bouge pas. Je ne sais pas d'où il vient. Dans un casque on voit chaque image, pas la moyenne, donc c'est le maximum qui compte.

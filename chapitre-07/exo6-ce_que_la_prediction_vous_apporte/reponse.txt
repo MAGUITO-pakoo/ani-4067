@@ -1,0 +1,8 @@
+Mes deux gestes :
+J'ai choisi un geste lent de 45 deg en 2000 ms, pour voir un mouvement très doux où la vitesse change peu. Et un demi-tour brusque de 180 deg en 200 ms, pour avoir un mouvement où la vitesse change beaucoup en très peu de temps.
+
+Où elle aide le moins :
+C'est le demi-tour : le rapport est de 4,64, contre 9,40 pour le quart de tour et 1125,54 pour le geste lent. Et en degrés l'erreur qui reste est aussi la plus grande, 2,5838 deg avec prédiction (contre 0,3301 et 0,0003). Le rapport de 1125,54 est énorme parce que l'erreur avec prédiction est presque nulle.
+
+Pourquoi là :
+Le modèle suppose que la vitesse reste constante pendant une période (13,889 ms à 72 Hz). Dans le geste lent c'est presque vrai, donc l'erreur est quasi nulle. Dans le demi-tour, la tête accélère et freine très fort en 200 ms : la vitesse change d'une pose à l'autre, donc la vitesse mesurée n'est déjà plus la bonne au moment de l'affichage, et l'erreur reste grande.

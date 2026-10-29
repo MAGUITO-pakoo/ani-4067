@@ -1,0 +1,8 @@
+La série programmée :
+la vitesse est stable : (0, 30, 0) deg/s sur les 20 lignes, avec  29,999 ou 30,001 parfois. Le y est positif, donc le lacet augmente. Le dt change (16,303 à 17,297 ms) mais la vitesse ne bouge pas.
+
+La série à la souris :
+elle n'est pas stable, même en bougeant à peu près à vitesse constante : x va de 29,591 à 247,356 deg/s, y de 22,193 à -103,138 deg/s (il change même de signe) et z de -0,098 à -42,193 deg/s.
+
+D'où vient le bruit :
+pas de dt, car les deux séries l'ont presque pareil (15 à 18 ms), et pas du calcul qui est le même. la différence, c'est que le tour programmé suit l'horloge, alors que la souris donne des mouvements qui arrivent irrégulièrement entre deux images. je pense que le bruit vient de la souris, mais je n'ai pas séparé ma main de l'arrivée des événements

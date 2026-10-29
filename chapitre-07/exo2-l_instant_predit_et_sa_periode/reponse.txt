@@ -1,0 +1,8 @@
+Ce qui est stable :
+la ligne ecart est toujours égale à la période (13,889 ms à 72 Hz), mais c'est normal : c'est mon code qui la calcule, donc ça ne prouve rien. Ce qui compte, c'est reel - predit, qui reste à peu près pareil pour une même cadence. Par contre il change quand je change la cadence (3,959 ms à 72 Hz, 1,047 ms à 60 Hz, 5,646 ms à 90 Hz, 8,426 ms à 120 Hz), parce que je prédis avec la période que je choisis, alors que l'image arrive au rythme de l'écran.
+
+Un divisé par la cadence :
+1000 / 72 = 13,889 ms, 1000 / 60 = 16,667 ms, 1000 / 90 = 11,111 ms et 1000 / 120 = 8,333 ms. Ce sont bien les périodes affichées par mon programme.
+
+La période de mon écran :
+En faisant reel-predit+periode, j'obtiens l'intervalle réel entre deux images : 3,959 + 13,889 = 17,848 ms à 72 Hz, 1,047 + 16,667 = 17,714 ms à 60 Hz, 5,646 + 11,111 = 16,757 ms à 90 Hz et 8,426 + 8,333 = 16,759 ms à 120 Hz. La moyenne fait environ 17,27 ms, donc 1000 / 17,27 ≈ 58 Hz, ce qui est proche de 60 Hz. Windows indique aussi 60 Hz, donc mon écran est à 60 Hz.

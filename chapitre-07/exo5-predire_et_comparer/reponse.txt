@@ -1,0 +1,7 @@
+Le gain :
+le rapport des deux moyennes est 0,5890 / 0,2727 = 2,16. la prédiction divise donc l'erreur par plus de 2 : elle retire 0,3163 deg en moyenne, soit un peu plus de la moitié de l'erreur sans prédiction.
+
+D'où vient l'erreur qui reste :
+le modèle suppose que la vitesse reste constante pendant une période de l'écran (16,667 ms), mais la souris accélère et s'arrête, et ses mouvements arrivent irrégulièrement. Quand la tête démarre d'un coup, la vitesse de l'image d'avant est nulle et la prédiction ne sert à rien : je pense que c'est pour ça que le max est le même dans les deux cas (14,4394 deg). Il y a eu 814 images sur 1000 sans mouvement de souris, donc ma moyenne est mélangée avec beaucoup d'images immobiles.
+lLe facteur dix :
+sur mes chiffres, l'affirmation est fausse parceque le rapport est d'environ 2,2, et pour le max il est de 1. mais je n'ai bougé la souris que sur 186 images sur 1000, donc ma mesure ne représente pas bien une tête qui regarde autour d'elle, et je ne peux pas dire que ce serait pareil avec un mouvement continu.

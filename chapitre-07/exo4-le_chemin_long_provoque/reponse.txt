@@ -1,0 +1,11 @@
+L'image fautive :
+c'est l'image 718, à lacet = 270,202 deg. C'est la seule où delta.w est négatif (-0,999996), et sa vitesse est (0, -20, 0) au lieu de (0, 20, 0).
+
+Le rapport :
+-20,000 / 20,000 = -1. La vitesse a la même grandeur que celle de l'image d'avant, mais le sens est inversé. Je n'ai pas lu Angle() et Axis() dans NkQuat.h, je note juste ce que j'ai mesuré.
+
+Pourquoi à ce lacet :
+un quaternion et son opposé donnent la même rotation. Je pense que la conversion de la matrice change de signe autour de 270 deg, mais je n'ai pas lu son code. Le signe change une fois et reste, donc delta.w est négatif sur une seule image.
+
+Ce qu'aurait vu le casque :
+Pour une image, la prédiction irait dans le mauvais sens : à 72 Hz environ 0,56 deg d'écart. Le monde ferait un petit sursaut une fois par tour, puis reviendrait.c
